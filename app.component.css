@@ -1,0 +1,26 @@
+h1{
+    color: chartreuse;
+    display: table;
+    background-color: darkmagenta;
+}
+form{
+    background-color:yellow;
+    display: inline;
+    display: block;
+    color: royalblue;
+}
+fieldset{
+    display: table;
+    background-color: blue;
+    color: chartreuse;
+}
+legend{
+    background-color: blue;
+    display: inline;
+    color: red;
+}
+button{
+    color: darkorchid;
+    width: 70px;
+    height: 30px;
+}

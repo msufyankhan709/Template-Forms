@@ -1,0 +1,39 @@
+<h1>Simple Form</h1>
+<form (ngSubmit)="submitForm()">
+  <div>
+    <label for="first-name-input">First Name: </label>
+    <input type="text" id="first-name-input" name="firstNameInput"
+    [(ngModel)]="contact.firstName"><br><br>
+  </div>
+  <div>
+    <label for="last-name-input">Last Name: </label>
+    <input type="text" id="last-name-input" name="lastNameInput"
+    [(ngModel)]="contact.lastName"><br><br>
+  </div>
+  <div>
+    <label for="select-state">State: </label>
+    <select id="state-select" name="stateSelect" [(ngModel)]="contact.state">
+     <option value="">Select One...</option>
+     <option *ngFor="let state of states" [value]="state[0]">{{state[1]}}</option>
+  </select>
+  </div><br>
+  <fieldset ngModelGroup="methodsOfContact">
+    <legend>Methods of contact</legend>
+    <div>
+      <label for="phone-input">Phone: </label>
+      <input type="text" id="phone-input" name="phoneInput"
+      [(ngModel)]="contact.phone"><br><br>
+    </div>
+    <div>
+      <label for="email-input">Email: </label>
+      <input type="text" id="email-input" name="email-Input"
+      [(ngModel)]="contact.email">
+    </div>
+  </fieldset>
+  <div>
+    <label for="comments-textarea">Comments: </label>
+   <textarea id="comments-textarea" name="commentsTextarea" [(ngModel)]="contact.comments"></textarea>
+  </div><br>
+  <button type="submit">Send</button>
+  <button type="reset">Reset</button>
+</form>
